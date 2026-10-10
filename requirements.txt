@@ -1,0 +1,7 @@
+ultralytics==8.4.78
+onnxruntime==1.27.0
+openvino==2026.4.1
+torch==2.5.1
+torchvision==0.20.1
+psutil
+numpy

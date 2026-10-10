@@ -1,0 +1,6 @@
+weights/
+data/
+__pycache__/
+results/*.log
+runs/
+results/analysis.md
