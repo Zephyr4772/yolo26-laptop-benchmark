@@ -14,8 +14,9 @@ import sys
 os.environ["YOLO_AUTOINSTALL"] = "False"
 import psutil  # noqa: E402
 
-# Hybrid Intel CPUs on Windows: after torchvision is imported, the scheduler tends to move this process onto
-# E-cores (2-10x slower). Pin to the P-cores unless --unpinned. i7-13650HX: logical CPUs 0-11 = 6 P-cores x 2 HT.
+# Hybrid Intel CPUs on Windows: in "Best power efficiency" mode the scheduler moves a process to slower cores a few
+# seconds after start-up (see ecore_repro.py / README). Pinning to P-cores recovers most of it; Best performance mode
+# avoids it. Pin unless --unpinned. i7-13650HX: logical CPUs 0-11 = 6 P-cores x 2 HT.
 PINNED = "--unpinned" not in sys.argv
 if PINNED:
     psutil.Process().cpu_affinity(list(range(12)))
