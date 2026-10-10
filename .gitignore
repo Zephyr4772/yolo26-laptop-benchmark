@@ -1,4 +1,5 @@
 weights/
+*.engine
 data/
 __pycache__/
 results/*.log

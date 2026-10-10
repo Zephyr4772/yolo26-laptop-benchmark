@@ -1,0 +1,12 @@
+{"model": "yolo26n", "config": "tensorrt_fp32", "trt_version": "11.4.0.106", "inf_ms": 4.664, "inf_rounds": [6.934, 4.664, 4.457]}
+{"model": "yolo26n", "config": "tensorrt_fp16", "trt_version": "11.4.0.106", "inf_ms": 3.408, "inf_rounds": [4.219, 3.408, 3.126]}
+{"model": "yolo11n", "config": "tensorrt_fp32", "trt_version": "11.4.0.106", "inf_ms": 5.857, "inf_rounds": [6.541, 5.857, 5.484]}
+{"model": "yolo11n", "config": "tensorrt_fp16", "trt_version": "11.4.0.106", "inf_ms": 3.468, "inf_rounds": [3.857, 3.468, 3.423]}
+{"model": "yolo26s", "config": "tensorrt_fp32", "trt_version": "11.4.0.106", "inf_ms": 11.439, "inf_rounds": [11.978, 11.436, 11.439]}
+{"model": "yolo26s", "config": "tensorrt_fp16", "trt_version": "11.4.0.106", "inf_ms": 5.216, "inf_rounds": [5.485, 5.216, 5.135]}
+{"model": "yolo11s", "config": "tensorrt_fp32", "trt_version": "11.4.0.106", "inf_ms": 10.179, "inf_rounds": [10.998, 10.179, 10.107]}
+{"model": "yolo11s", "config": "tensorrt_fp16", "trt_version": "11.4.0.106", "inf_ms": 4.741, "inf_rounds": [5.17, 4.741, 4.644]}
+{"model": "yolo26m", "config": "tensorrt_fp32", "trt_version": "11.4.0.106", "inf_ms": 20.186, "inf_rounds": [21.069, 20.186, 18.687]}
+{"model": "yolo26m", "config": "tensorrt_fp16", "trt_version": "11.4.0.106", "inf_ms": 6.855, "inf_rounds": [7.039, 6.855, 6.399]}
+{"model": "yolo11m", "config": "tensorrt_fp32", "trt_version": "11.4.0.106", "inf_ms": 15.985, "inf_rounds": [16.334, 15.985, 15.077]}
+{"model": "yolo11m", "config": "tensorrt_fp16", "trt_version": "11.4.0.106", "inf_ms": 5.808, "inf_rounds": [6.099, 5.808, 5.446]}
