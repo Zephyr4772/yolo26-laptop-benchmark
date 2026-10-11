@@ -1,5 +1,7 @@
 # YOLO26 vs YOLO11 on a gaming laptop: same speed, +0.6–0.8 mAP, and Windows power-saving can cost you up to 8×
 
+![YOLO26 vs YOLO11 on a gaming laptop: headline numbers](https://raw.githubusercontent.com/Zephyr4772/yolo26-laptop-benchmark/main/assets/hero.png)
+
 An independent benchmark of [Ultralytics YOLO26](https://huggingface.co/Ultralytics/YOLO26) against YOLO11 (n/s/m) on an ordinary gaming laptop.
 
 **Hardware:** i7-13650HX (6 P-cores + 8 E-cores) and an RTX 4060 Laptop GPU, Windows 11, on AC power.
@@ -23,6 +25,8 @@ An independent benchmark of [Ultralytics YOLO26](https://huggingface.co/Ultralyt
 
 **Full COCO val2017, 5,000 images** (PyTorch, CUDA FP32, batch 32, end-to-end/NMS-free outputs):
 
+![Accuracy on full COCO val2017](https://raw.githubusercontent.com/Zephyr4772/yolo26-laptop-benchmark/main/assets/accuracy.png)
+
 | | n | s | m |
 |---|---|---|---|
 | YOLO26 | **39.5** | **47.2** | **51.8** |
@@ -44,6 +48,8 @@ An independent benchmark of [Ultralytics YOLO26](https://huggingface.co/Ultralyt
 
 The figures are ms per image, inference only, as the median of 3 interleaved rounds × 50 images.
 
+![Inference latency by runtime](https://raw.githubusercontent.com/Zephyr4772/yolo26-laptop-benchmark/main/assets/latency.png)
+
 | runtime | 26n | 11n | 26s | 11s | 26m | 11m |
 |---|---|---|---|---|---|---|
 | PyTorch CPU | 52.7 | 49.8 | 95.2 | 92.3 | 200.8 | 198.3 |
@@ -57,11 +63,15 @@ The figures are ms per image, inference only, as the median of 3 interleaved rou
 
 † TensorRT engines were built directly with the `tensorrt` package, not the Ultralytics exporter. The times include copying each image to the GPU. TensorRT 11 has no FP16 builder flag, so the FP16 engines come from an FP16 ONNX export built as a strongly typed network.
 
+![Speed vs accuracy](https://raw.githubusercontent.com/Zephyr4772/yolo26-laptop-benchmark/main/assets/frontier.png)
+
 **End to end** (pre-processing + inference + post-processing), YOLO26n reaches **70 FPS on OpenVINO INT8 (CPU)** and **79 FPS on PyTorch CUDA FP16**.
 
 ## Windows power mode: the 2–8× trap
 
 **YOLO26n inference, ms per image:**
+
+![Windows power-mode trap](https://raw.githubusercontent.com/Zephyr4772/yolo26-laptop-benchmark/main/assets/powermode.png)
 
 | runtime | Best power efficiency | + pinned to P-cores | Best performance |
 |---|---|---|---|
